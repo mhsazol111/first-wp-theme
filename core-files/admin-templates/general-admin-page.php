@@ -1,5 +1,7 @@
 <h1>General Settings</h1>
-
-<form action="" method="post">
-	<?php settings_fields( 'itw-general-settings-group' ); ?>
+<?php settings_errors(); ?>
+<form action="options.php" method="post">
+	<?php settings_fields( 'itw-settings-group' ); ?>
+	<?php do_settings_sections( 'itw-theme-options' ) ?>
+	<?php submit_button(); ?>
 </form>
